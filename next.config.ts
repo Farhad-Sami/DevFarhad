@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 
-const isGithubPages = process.env.NODE_ENV === "production";
+// const isGithubPages = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   output: "export", // enables `next export` for static HTML export
-  basePath: isGithubPages ? "/DevFarhad" : "",
-  assetPrefix: isGithubPages ? "/DevFarhad/" : "",
+  basePath: "/DevFarhad",
+  assetPrefix: "/DevFarhad",
   images: {
     unoptimized: true, // required for static export to support <Image />
   },
