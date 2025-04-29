@@ -7,7 +7,6 @@ import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { ModeToggle } from "@/components/themetoggle";
-import { IconInnerShadowTop } from "@tabler/icons-react";
 
 export default function Page() {
   const messages = [
@@ -100,7 +99,7 @@ export default function Page() {
               className="mx-2 data-[orientation=vertical]:h-4"
             />
             <div className="flex items-center gap-2">
-              <IconInnerShadowTop className="!size-5" />
+              <Image src="/logo.svg" alt="Logo" width={25} height={25} />
               <span className="text-base font-semibold text-white">
                 DevFarhad
               </span>

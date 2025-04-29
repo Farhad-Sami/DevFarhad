@@ -1,6 +1,43 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("/fonts/SF_Pro_Rounded_Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("/fonts/SF_Pro_Rounded_Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("/fonts/SF_Pro_Rounded_Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("/fonts/SF_Pro_Rounded_Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-sf {
+  font-family: "SF Pro Rounded", system-ui, sans-serif;
+}
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
