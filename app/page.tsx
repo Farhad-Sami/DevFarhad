@@ -85,7 +85,7 @@ export default function Page() {
           {" "}
           {/* Background image */}{" "}
           <Image
-            src="hero-backgound.jpeg"
+            src="/hero.jpeg"
             alt="Hero Background"
             fill
             className="object-cover"
@@ -99,7 +99,7 @@ export default function Page() {
               className="mx-2 data-[orientation=vertical]:h-4"
             />
             <div className="flex items-center gap-2">
-              <Image src="logo.svg" alt="Logo" width={25} height={25} />
+              <Image src="/logo.svg" alt="Logo" width={25} height={25} />
               <span className="text-base font-semibold text-white">
                 DevFarhad
               </span>
@@ -130,13 +130,6 @@ export default function Page() {
                 </p>
               </motion.div>
             </AnimatePresence>
-
-            {/* <div className="text-white max-w-lg space-y-4">
-              <h1 className="text-5xl font-bold leading-tight">
-                Welcome to my website
-              </h1>
-              <h2 className="text-3xl font-light">Farhad</h2>
-            </div> */}
           </div>
         </div>
       </SidebarInset>
