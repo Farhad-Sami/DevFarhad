@@ -3,7 +3,7 @@
 // const isGithubPages = process.env.NODE_ENV === "production";
 
 const nextConfig = {
-  output: "export", // enables `next export` for static HTML export
+  // output: "export", // enables `next export` for static HTML export
   distDir:"dist",
   basePath: "/DevFarhad",
   assetPrefix: "/DevFarhad",
