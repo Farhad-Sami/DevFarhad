@@ -4,12 +4,13 @@
 
 const nextConfig = {
   output: "export", // enables `next export` for static HTML export
-  basePath: "/DevFarhad",
-  assetPrefix: "/DevFarhad",
+  distDir:"dist",
+  // basePath: "/DevFarhad",
+  // assetPrefix: "/DevFarhad",
   images: {
     unoptimized: true, // required for static export to support <Image />
   },
-  trailingSlash: true, // optional but improves static hosting compatibility
+  // trailingSlash: true, // optional but improves static hosting compatibility
 };
 
 module.exports = nextConfig;
