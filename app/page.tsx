@@ -85,7 +85,7 @@ export default function Page() {
           {" "}
           {/* Background image */}{" "}
           <Image
-            src="/hero-backgound.jpeg"
+            src="hero-backgound.jpeg"
             alt="Hero Background"
             fill
             className="object-cover"
@@ -99,7 +99,7 @@ export default function Page() {
               className="mx-2 data-[orientation=vertical]:h-4"
             />
             <div className="flex items-center gap-2">
-              <Image src="/logo.svg" alt="Logo" width={25} height={25} />
+              <Image src="logo.svg" alt="Logo" width={25} height={25} />
               <span className="text-base font-semibold text-white">
                 DevFarhad
               </span>
