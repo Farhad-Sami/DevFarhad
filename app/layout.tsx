@@ -51,7 +51,7 @@ export default function RootLayout({
                 />
                 <div className="flex gap-2">
                   <Image
-                    src="/logo.svg"
+                    src="logo.svg"
                     alt="DevFarhad Logo"
                     width={25}
                     height={25}

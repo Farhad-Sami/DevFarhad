@@ -69,7 +69,7 @@ export default function Page() {
       {" "}
       {/* Background image */}{" "}
       <Image
-        src="/hero-backgound.jpeg"
+        src="hero-backgound.jpeg"
         alt="Hero Background"
         fill
         className="object-cover"
