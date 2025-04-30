@@ -2,8 +2,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Separator } from "@/components/ui/separator";
-import { ModeToggle } from "@/components/themetoggle";
 
 export default function Page() {
   const messages = [
