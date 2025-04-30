@@ -1,11 +1,8 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { AppSidebar } from "@/components/app-sidebar";
-import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
-import { SidebarTrigger } from "@/components/ui/sidebar";
 import { ModeToggle } from "@/components/themetoggle";
 
 export default function Page() {
@@ -60,7 +57,6 @@ export default function Page() {
     },
   ];
 
-
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -71,68 +67,39 @@ export default function Page() {
   }, []);
 
   return (
-    <SidebarProvider
-      style={
-        {
-          "--sidebar-width": "calc(var(--spacing) * 72)",
-          "--header-height": "calc(var(--spacing) * 12)",
-        } as React.CSSProperties
-      }
-    >
-      <AppSidebar variant="inset" />
-      <SidebarInset>
-        <div className="relative w-full h-full overflow-hidden p-0 m-0 rounded-xl shadow-none border-none">
-          {" "}
-          {/* Background image */}{" "}
-          <Image
-            src="hero.jpeg"
-            alt="Hero Background"
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Header */}
-          <header className="absolute top-0 left-0 right-0 z-20 h-16 bg-black/60 flex items-center border-b px-4 lg:px-6">
-            <SidebarTrigger />
-            <Separator
-              orientation="vertical"
-              className="mx-2 data-[orientation=vertical]:h-4"
-            />
-            <div className="flex items-center gap-2">
-              <Image src="logo.svg" alt="Logo" width={25} height={25} />
-              <span className="text-base font-semibold text-white">
-                DevFarhad
-              </span>
-            </div>
-            <div className="ml-auto flex items-center gap-2">
-              <ModeToggle />
-            </div>
-          </header>
-          {/* Overlay text */}
-          <div className="absolute inset-0 z-10 bg-black/50 flex items-center justify-start px-10 pt-80">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={messages[index].heading}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.6 }}
-                className="space-y-2"
-              >
-                <h3 className="text-white text-4xl font-semibold">
-                  {messages[index].heading}
-                </h3>
-                <h4 className="text-white text-2xl font-light">
-                  {messages[index].subheading}
-                </h4>
-                <p className="text-white text-base opacity-80 max-w-md">
-                  {messages[index].description}
-                </p>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </div>
-      </SidebarInset>
-    </SidebarProvider>
+    <div className="relative w-full h-full overflow-hidden m-0 rounded-xl shadow-none border-none">
+      {" "}
+      {/* Background image */}{" "}
+      <Image
+        src="/hero-backgound.jpeg"
+        alt="Hero Background"
+        fill
+        className="object-cover"
+        priority
+      />
+      {/* Overlay text */}
+      <div className="absolute inset-0 z-10 bg-black/50 flex items-center justify-start px-10 pt-80">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={messages[index].heading}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-2"
+          >
+            <h3 className="text-white text-4xl font-semibold">
+              {messages[index].heading}
+            </h3>
+            <h4 className="text-white text-2xl font-light">
+              {messages[index].subheading}
+            </h4>
+            <p className="text-white text-base opacity-80 max-w-md">
+              {messages[index].description}
+            </p>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    </div>
   );
 }
